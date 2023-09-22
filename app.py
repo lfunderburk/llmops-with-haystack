@@ -9,6 +9,8 @@ from haystack.nodes import BM25Retriever, PromptTemplate, AnswerParser, PromptNo
 import os
 from haystack.pipelines import Pipeline
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 # Load environment variables (if any)
 load_dotenv(".env")
 load_dotenv()
