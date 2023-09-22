@@ -14,7 +14,7 @@ This chatbot uses RAG to answer questions about the Seven Wonders of the Ancient
 
 ## Mini demo
 
-![](chatbot.gif)
+![](chat-demo.gif)
 
 Here are sample questions you can ask it:
 
