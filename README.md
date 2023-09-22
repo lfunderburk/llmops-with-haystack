@@ -123,5 +123,5 @@ async def main(message: str):
 ### Run application
 
 ``` bash
-poetry run chainlit run src/app.py --port 7860
+poetry run chainlit run app.py --port 7860
 ```
