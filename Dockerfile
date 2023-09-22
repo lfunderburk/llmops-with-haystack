@@ -1,14 +1,20 @@
-# read the doc: https://huggingface.co/docs/hub/spaces-sdks-docker
-# you will also find guides on how best to write your Dockerfile
-
+# Use the official Python image as the base image
 FROM python:3.10
 
+# Set the working directory
 WORKDIR /app
 
-RUN pip install --no-cache-dir --upgrade poetry
+# Copy the poetry files
+COPY pyproject.toml poetry.lock /app/
 
+# Install poetry
+RUN pip install poetry
+
+# Install project dependencies
+RUN poetry lock
+RUN poetry install
+
+# Copy the rest of the application code
 COPY . .
-
-RUN poetry install 
 
 CMD ["poetry", "run", "chainlit", "run", "app.py", "--port", "7860"]

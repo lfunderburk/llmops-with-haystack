@@ -11,6 +11,7 @@ from haystack.pipelines import Pipeline
 
 # Load environment variables (if any)
 load_dotenv(".env")
+load_dotenv()
 MY_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Initialize Haystack's QA system
