@@ -86,11 +86,15 @@ rag_prompt = PromptTemplate(
 
 ```
 
-5. Set the nodes using GPT-3.5-turbo
+5. Set a Retriever node using `BM25Retriever`
 
 ```python
- Set up nodes
 retriever = BM25Retriever(document_store=document_store, top_k=2)
+```
+
+6. Set a prompt node using GPT-3.5-turbo
+
+```python
 pn = PromptNode("gpt-3.5-turbo", 
                 api_key=MY_API_KEY, 
                 model_kwargs={"stream":False},
@@ -98,7 +102,7 @@ pn = PromptNode("gpt-3.5-turbo",
 
 ```
 
-6. Build the pipeline
+7. Build the pipeline
 
 ```python
 # Set up pipeline
