@@ -12,6 +12,10 @@ pinned: false
 
 This chatbot uses RAG to answer questions about the Seven Wonders of the Ancient World. 
 
+## Mini demo
+
+![](chatbot.gif)
+
 Here are sample questions you can ask it:
 
 1. What is the Great Pyramid of Giza?
