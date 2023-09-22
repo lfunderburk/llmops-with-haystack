@@ -25,4 +25,4 @@ The data is from the [Seven Wonders dataset][1] on Hugging Face. https://hugging
 
 ### Method
 
-The chatbots retrieval mechanism is developed using Retrieval Augmented Generation (RAG) with [Haystack](https://haystack.deepset.ai/tutorials/22_pipeline_with_promptnode) and its user interface is built with [Chainlit](https://docs.chainlit.io/overview). It is using OpenAI GPT-3.5-turbo. 
+The chatbots retrieval mechanism is developed using Retrieval Augmented Generation (RAG) with Haystack by deepset and its user interface is built with Chainlitoverview. It is using OpenAI GPT-3.5-turbo. The full script is [here](app.py)
