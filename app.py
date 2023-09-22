@@ -1,3 +1,6 @@
+import torch
+torch.device('cpu')
+
 # Imports and Initializations for Chainlit
 import chainlit as cl
 from dotenv import load_dotenv
@@ -8,8 +11,6 @@ from datasets import load_dataset
 from haystack.nodes import BM25Retriever, PromptTemplate, AnswerParser, PromptNode
 import os
 from haystack.pipelines import Pipeline
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Load environment variables (if any)
 load_dotenv(".env")

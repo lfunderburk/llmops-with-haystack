@@ -28,9 +28,6 @@ COPY pyproject.toml poetry.lock /app/
 RUN pip install --upgrade pip
 RUN pip install poetry
 
-# Install the CPU-only version of torch
-RUN pip install torch==1.11.0+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
-
 # Set environment variable to create a virtual environment within the project directory
 ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 
