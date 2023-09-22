@@ -54,7 +54,3 @@ async def main(message: str):
 
     # Send the message to the user
     await msg.send()
-
-if __name__ == "__main__":
-    # You can add any Chainlit app initialization or run code here
-    pass
