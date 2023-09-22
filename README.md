@@ -1,3 +1,13 @@
+---
+title: Haystack-7-wonders
+emoji: 🚀
+colorFrom: indigo
+colorTo: red
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # Welcome! 
 
 This chatbot uses RAG to answer questions about the Seven Wonders of the Ancient World. 

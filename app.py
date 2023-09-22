@@ -39,7 +39,6 @@ pipe = Pipeline()
 pipe.add_node(component=retriever, name="retriever", inputs=["Query"])
 pipe.add_node(component=pn, name="prompt_node", inputs=["retriever"])
 
-
 @cl.on_message
 async def main(message: str):
     # Use the pipeline to get a response
