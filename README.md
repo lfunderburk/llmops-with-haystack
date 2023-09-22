@@ -19,6 +19,19 @@ Here are sample questions you can ask it:
 
 ## How is it built?
 
+### Poetry package management
+
+This project uses [Poetry](https://python-poetry.org/) for package management.
+
+It uses [this `pyproject.toml` file](pyproject.toml)
+
+To install dependencies:
+
+```bash
+pip install poetry
+poetry install
+```
+
 ### Data source: 
 
 The data is from the [Seven Wonders dataset][1] on Hugging Face. https://huggingface.co/datasets/bilgeyucel/seven-wonders
@@ -78,4 +91,27 @@ pn = PromptNode("gpt-3.5-turbo",
 pipe = Pipeline()
 pipe.add_node(component=retriever, name="retriever", inputs=["Query"])
 pipe.add_node(component=pn, name="prompt_node", inputs=["retriever"])
+```
+
+### Connecting the pipeline to Chainlit
+
+```python
+
+@cl.on_message
+async def main(message: str):
+    # Use the pipeline to get a response
+    output = pipe.run(query=message)
+
+    # Create a Chainlit message with the response
+    response = output['answers'][0].answer
+    msg = cl.Message(content=response)
+
+    # Send the message to the user
+    await msg.send()
+```
+
+### Run application
+
+``` bash
+poetry run chainlit run src/app.py --port 7860
 ```

@@ -40,11 +40,6 @@ pipe.add_node(component=retriever, name="retriever", inputs=["Query"])
 pipe.add_node(component=pn, name="prompt_node", inputs=["retriever"])
 
 
-@cl.on_chat_start
-async def start_chat():
-    # You can initialize or reset the pipeline here if needed
-    pass
-
 @cl.on_message
 async def main(message: str):
     # Use the pipeline to get a response
