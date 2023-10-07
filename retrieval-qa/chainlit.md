@@ -21,5 +21,5 @@ I then initialized a Haystack pipeline whose nodes include a prompt node that us
 
 1. The WebRetriever will scrape the internet for reviews of the Barbie movie (2023) based on the natural language query using the SERP API.
 2. The WebRetriever transforms the results into Document objects which can then be saved into a FAISS document store.
-3. The DensePassageRetriever` node will apply embeddings to the documents in the document store and then it will use the embeddings to retrieve the top k results for a given query.
+3. The DensePassageRetriever node will apply embeddings to the documents in the document store and then it will use the embeddings to retrieve the top k results for a given query.
 4. When a user asks a question, the PromptNode will use the top k results to generate an answer using OpenAI's GPT-4.

@@ -12,4 +12,4 @@ This chatbot uses RAG to answer questions about the Seven Wonders of the Ancient
 
 This chatbot can help you identify what people think about the Barbie (2023) movie. You can also ask it information about the movie.
 
-[Read more here](retrieval-qa/chainlit-app/README.md)
+[Read more here](retrieval-qa/README.md)
