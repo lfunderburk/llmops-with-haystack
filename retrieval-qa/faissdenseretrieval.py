@@ -59,12 +59,11 @@ def initialize_faiss_document_store(documents):
 
     return document_store, retriever
 
-def initialize_rag_pipeline(document_store, retriever, openai_key):
+def initialize_rag_pipeline(retriever, openai_key):
     """
     Initialize a pipeline for RAG-based question answering.
 
     Args:
-        document_store (FAISSDocumentStore): FAISS document store.
         retriever (DensePassageRetriever): Dense passage retriever.
         openai_key (str): API key for OpenAI.
 
@@ -103,7 +102,7 @@ if __name__=="__main__":
     document_store, retriever = initialize_faiss_document_store(documents=documents)
 
     # Initialize pipeline
-    query_pipeline = initialize_rag_pipeline(document_store=document_store, retriever=retriever, openai_key=openai_key)
+    query_pipeline = initialize_rag_pipeline(retriever=retriever, openai_key=openai_key)
 
 
 

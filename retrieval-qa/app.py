@@ -15,7 +15,7 @@ documents = initialize_documents(serp_key=serp, nl_query="IMDB movie reviews for
 document_store, retriever = initialize_faiss_document_store(documents=documents)
 
 # Initialize pipeline
-query_pipeline = initialize_rag_pipeline(document_store=document_store, retriever=retriever, openai_key=openai_key)
+query_pipeline = initialize_rag_pipeline(retriever=retriever, openai_key=openai_key)
 
 @cl.on_message
 async def main(message: str):
