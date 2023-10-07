@@ -2,16 +2,25 @@
 
 This chatbot can help you identify what people think about the Barbie (2023) movie. You can also ask it information about the movie. 
 
+### Mini demo
+
+![](demo.gif)
+
+### App
+
+- Code to do web scraping from natural language query is in [faissdenseretrieval.py](faissdenseretrieval.py)
+- Code to run the app is in [app.py](app.py)
+
 ### How it is built:
 
 The application uses Haystack's WebRetriever class to scrape reviews from the internet. It uses a simple NLP query: "IMDB movie reviews for the Barbie movie (2023)" and 100 top k results were fetched.  The results were then stored into a FAISS document store. 
 
 To retrieve answers I used the DensePassageRetriever class from Haystack using the following models:
 
-
+```
 query_embedding_model="facebook/dpr-question_encoder-single-nq-base",
 passage_embedding_model="facebook/dpr-ctx_encoder-single-nq-base",
-
+```
 
 The embeddings were applied onto the documents in the document store.
 

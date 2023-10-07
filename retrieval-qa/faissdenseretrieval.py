@@ -80,7 +80,9 @@ def initialize_rag_pipeline(document_store, retriever, openai_key):
                                             output_parser=AnswerParser())
     prompt_node = PromptNode(model_name_or_path = "gpt-4",
                             api_key = openai_key,
-                            default_prompt_template = prompt_template)
+                            default_prompt_template = prompt_template,
+                            max_length = 500,
+                            model_kwargs={"stream":True})
 
     query_pipeline = Pipeline()
     query_pipeline.add_node(component=retriever, name="Retriever", inputs=["Query"])
