@@ -7,11 +7,8 @@ license = "Apache 2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-torch = [
-  {url = "https://download.pytorch.org/whl/cpu/torch-1.10.0%2Bcpu-cp39-cp39-linux_x86_64.whl", markers = "sys_platform == 'linux'"},
-]
-farm-haystack = {extras = ["faiss","preprocessing"], version = "^1.21.2"}
+python = "^3.10"
+farm-haystack = {extras = ["faiss", "inference"], version = "^1.21.2"}
 chainlit = "^0.7.0"
 openai = "^0.28.0"
 jupyter = "^1.0.0"

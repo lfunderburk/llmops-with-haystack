@@ -1,6 +1,6 @@
-poetry
-farm-haystack ==1.20.1
-chainlit ==0.7.0
-openai ==0.28.0
-python-dotenv ==1.0.0
-datasets ==2.14.5
+farm-haystack[faiss,inference]
+chainlit==0.7.0
+openai==0.28.0
+python-dotenv==1.0.0
+datasets==2.14.5
+nltk==3.8.1
