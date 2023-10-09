@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "llmops-with-haystack"
+version = "0.1.0"
+description = ""
+authors = ["Laura Gutierrez Funderburk <lgutierrwr@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = [
+  {url = "https://download.pytorch.org/whl/cpu/torch-1.10.0%2Bcpu-cp39-cp39-linux_x86_64.whl", markers = "sys_platform == 'linux'"},
+]
+farm-haystack = {extras = ["faiss"], version = "^1.21.2"}
+chainlit = "^0.7.0"
+openai = "^0.28.0"
+jupyter = "^1.0.0"
+ipykernel = "^6.25.2"
+python-dotenv = "^1.0.0"
+datasets = "^2.14.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
