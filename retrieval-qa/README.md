@@ -13,6 +13,8 @@ This chatbot can help you identify what people think about the Barbie (2023) mov
 
 ### How it is built:
 
+![](./diagram/pipeline.jpg)
+
 The application uses Haystack's WebRetriever class to scrape reviews from the internet. It uses a simple NLP query: "IMDB movie reviews for the Barbie movie (2023)" and 100 top k results were fetched.  The results were then stored into a FAISS document store. 
 
 To retrieve answers I used the DensePassageRetriever class from Haystack using the following models:
