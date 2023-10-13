@@ -8,7 +8,6 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-farm-haystack = {extras = ["faiss", "inference", "preprocessing", "weaviate"], version = "1.21.1"}
 chainlit = "^0.7.0"
 openai = "^0.28.0"
 jupyter = "^1.0.0"
@@ -17,6 +16,7 @@ python-dotenv = "^1.0.0"
 datasets = "^2.14.5"
 kaggle = "^1.5.16"
 flask = "^3.0.0"
+farm-haystack = {extras = ["faiss", "inference"], version = "^1.21.2"}
 
 
 [build-system]
